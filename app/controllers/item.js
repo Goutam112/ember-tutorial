@@ -6,7 +6,8 @@ export default class ItemController extends Controller {
   @tracked color = 'red';
 
   get productImage() {
-    return `/assets/images/beats-solo-${this.color}.png`;
+    // return `/assets/images/beats-solo-${this.color}.png`;
+    return this.model.colors.find((p) => p.color === this.color).image;
   }
 
   @action onChangeColor(newColor) {
