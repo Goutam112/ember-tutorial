@@ -13,8 +13,10 @@
 
   {{! Price }}
   <section class={{unless @isDetails "h4"}}>
-    <del class="small text-black-50">{{currency @price.original}}</del>
-    <i class="text-danger font-weight-bold">{{currency @price.current}}</i>
+    {{#if @price}}
+      <del class="small text-black-50">{{currency @price.original}}</del>
+      <i class="text-danger font-weight-bold">{{currency @price.current}}</i>
+    {{/if}}
   </section>
 
   {{#if @isDetails}}

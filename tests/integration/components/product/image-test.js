@@ -11,16 +11,6 @@ module('Integration | Component | product/image', function (hooks) {
     // Handle any actions with this.set('myAction', function(val) { ... });
 
     await render(hbs`<Product::Image />`);
-
     assert.dom().hasText('');
-
-    // Template block usage:
-    await render(hbs`
-      <Product::Image>
-        template block text
-      </Product::Image>
-    `);
-
-    assert.dom().hasText('template block text');
   });
 });
