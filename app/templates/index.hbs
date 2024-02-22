@@ -1,5 +1,5 @@
 <GeneralContainer>
   {{#each this.model as |product|}}
-    <Product @product={{product}} />
+    <Product data-test-product={{product.id}} @product={{product}} />
   {{/each}}
 </GeneralContainer>

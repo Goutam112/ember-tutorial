@@ -37,7 +37,12 @@
           {{/each}}
         </div>
       </div>
-      <button class="btn btn-info" type="button" onClick={{this.addToCart}}>
+      <button
+        data-test-add-to-cart
+        class="btn btn-info"
+        type="button"
+        onClick={{this.addToCart}}
+      >
         <i class="fa fa-shopping-cart mr-1"></i>
         Add to cart
       </button>
