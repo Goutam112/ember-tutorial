@@ -1,3 +1,5 @@
+<Navbar />
+
 <LinkTo data-test-cart @route="cart" class="cart-link">
   <i class="fa fa-shopping-cart"></i>
   {{#if this.cart.itemList.length}}
@@ -13,3 +15,5 @@
 <main class="container mt-5">
   {{yield}}
 </main>
+
+<Footer />

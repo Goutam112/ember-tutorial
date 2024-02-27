@@ -28,7 +28,7 @@ export const products = [{
 },
 {
   "id": "2",
-  "name": "Nike Aire Force 1",
+  "name": "Nike Air Force 1",
   "description": "Debuting in 1982, the AF1 was the first basketball shoe to house Nike Air, revolutionizing the game while rapidly gaining traction around the world.",
   "price": {
     "original": 109.95,
