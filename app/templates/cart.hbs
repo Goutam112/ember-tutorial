@@ -22,7 +22,7 @@
         type="number"
         class="ml-auto"
         value={{item.count}}
-        label="Item Count"
+        label="{{item.name}} count"
         {{on "input" (fn this.updateItemCount item)}}
       />
     </div>
