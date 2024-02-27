@@ -19,10 +19,10 @@
         <i class="font-weight-bold">{{currency item.price}}</i>
       </div>
       <input
+        id={{item.id}}
         type="number"
         class="ml-auto"
         value={{item.count}}
-        label="{{item.name}} count"
         {{on "input" (fn this.updateItemCount item)}}
       />
     </div>
