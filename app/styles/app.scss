@@ -19,3 +19,7 @@ body {
   font-family: "Urbanist", sans-serif;
   letter-spacing: 0.02em;
 }
+
+main {
+  min-height: calc(100vh - 315px);
+}
