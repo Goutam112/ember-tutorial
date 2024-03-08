@@ -1,5 +1,5 @@
 import express from 'express';
-import * as ProductController from '../controller/product';
+import ProductController from '../controller/product';
 import mongoose from 'mongoose';
 
 const router = express.Router();

@@ -1,8 +1,12 @@
 import { Schema, model } from 'mongoose';
 
 const ProductSchema = new Schema({
-  productName: { type: String, required: true },
-  category: { type: String, required: true },
+  name: { type: String, required: true },
+  category: {
+    type: String,
+    required: true,
+    enum: ['tech', 'sneaker', 'gaming', 'clothing', 'misc'],
+  },
   colors: [{ color: String, image: String }],
   price: { original: Number, current: Number },
   rating: { type: Number, required: true, min: 1, max: 5 },
