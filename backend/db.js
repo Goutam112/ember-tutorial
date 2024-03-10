@@ -1,14 +1,12 @@
 /* eslint-disable no-undef */
-import { connect } from 'mongoose';
+const mongoose = require('mongoose');
 require('dotenv').config();
 
-const connectDB = async () => {
+module.exports.connectDB = async () => {
   try {
-    await connect(process.env.MONGODB_URI, {});
+    await mongoose.connect(process.env.MONGODB_URI, {});
     console.log('Connected to MongoDB');
   } catch (error) {
     console.log('Error connecting to MongoDB:', error);
   }
 };
-
-export default connectDB;

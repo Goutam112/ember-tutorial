@@ -1,4 +1,5 @@
-import { Schema, model } from 'mongoose';
+/* eslint-disable no-undef */
+const { Schema, model } = require('mongoose');
 
 const ProductSchema = new Schema({
   name: { type: String, required: true },
@@ -14,5 +15,4 @@ const ProductSchema = new Schema({
   features: [String],
 });
 
-const ProductModel = model('product', ProductSchema);
-export default ProductModel;
+module.exports.ProductModel = model('product', ProductSchema);
