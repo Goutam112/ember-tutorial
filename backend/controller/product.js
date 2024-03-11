@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
-const { Product } = require('../model/product');
+const { ProductModel } = require('../model/product');
 
 module.exports.getProducts = async (req, res) => {
   try {
-    const products = await Product.find({});
+    const products = await ProductModel.find({});
     res.status(200).json({ products });
   } catch (err) {
     console.error('Error fetching all products', err);
@@ -14,7 +14,7 @@ module.exports.getProducts = async (req, res) => {
 module.exports.getProductById = async (req, res) => {
   try {
     const productId = req.params.id;
-    const product = await Product.findById(productId);
+    const product = await ProductModel.findById(productId);
 
     if (!product) {
       return res.status(404).json({ message: 'Product not found' });

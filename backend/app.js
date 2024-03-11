@@ -8,13 +8,13 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 // Connect to MongoDB
-db.connectDB();
+db.connectDB().then(() => {
+  app.use(express.json());
 
-app.use(express.json());
+  app.use('/api/products', productRoutes);
 
-app.use('/api/products', productRoutes);
-
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server started on port ${PORT}`);
+  // Start the server
+  app.listen(PORT, () => {
+    console.log(`Server started on port ${PORT}`);
+  });
 });
