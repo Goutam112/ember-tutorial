@@ -1,5 +1,7 @@
 /* eslint-disable no-undef */
 const express = require('express');
+const cors = require('cors');
+
 const db = require('./db');
 const productRoutes = require('./routes/product');
 
@@ -10,6 +12,8 @@ const PORT = process.env.PORT || 8000;
 // Connect to MongoDB
 db.connectDB().then(() => {
   app.use(express.json());
+
+  app.use(cors());
 
   app.use('/api/products', productRoutes);
 
