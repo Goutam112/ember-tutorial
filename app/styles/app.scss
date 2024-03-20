@@ -12,7 +12,7 @@
 @import "./footer";
 
 body {
-  background-color: rgb(215, 215, 215);
+  background: url("public/assets/images/bg.jpg") cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,5 +21,14 @@ body {
 }
 
 main {
-  min-height: calc(100vh - 315px);
+  min-height: calc(100vh - 270px);
+  justify-content: center;
+}
+
+.main-container {
+  padding: 20px;
+  width: 85%;
+  margin: auto;
+  border-radius: 8px; // Optional: adds rounded corners for a softer look
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Optional: adds depth
 }

@@ -6,6 +6,11 @@
     class="product"
   >
     <Product::Image @src={{this.productImage}} />
-    <Product::Details @name={{@product.name}} @price={{@product.price}} />
+    <Product::Details
+      @id={{@product.id}}
+      @name={{@product.name}}
+      @price={{@product.price}}
+      @rating={{@product.rating}}
+    />
   </LinkTo>
 {{/if}}

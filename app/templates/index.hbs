@@ -1,5 +1,11 @@
 <GeneralContainer>
-  {{#each this.model as |product|}}
-    <Product data-test-product={{product.id}} @product={{product}} />
-  {{/each}}
+  <div class="main-container d-flex">
+    {{#each this.model as |product|}}
+      <Product
+        data-test-product={{product.id}}
+        @product={{product}}
+        class="col-12 col-md-6 col-lg-4"
+      />
+    {{/each}}
+  </div>
 </GeneralContainer>

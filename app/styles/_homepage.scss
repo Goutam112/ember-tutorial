@@ -22,8 +22,12 @@
   justify-content: center;
   align-items: center;
 
+  transition: ease-in-out 0.1s;
+
   &:hover {
     text-decoration: none;
+    color: rgb(167, 38, 38);
+    scale: 1.1;
   }
 
   .cart-count {
@@ -37,4 +41,11 @@
     height: 20px;
     width: 20px;
   }
+}
+
+GeneralContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: start;
 }

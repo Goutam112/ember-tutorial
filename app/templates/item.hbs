@@ -1,5 +1,5 @@
 <GeneralContainer>
-  <div class="card p-5">
+  <div class="card p-5 main-container">
     <div class="product item-details-page {{if this.isZoomed 'is-zoomed'}}">
       <Product::Image
         @src={{this.productImage}}
@@ -8,6 +8,7 @@
       <Product::Details
         @isDetails={{true}}
         @name={{this.model.name}}
+        @rating={{this.model.rating}}
         @price={{this.model.price}}
         @colors={{this.model.colors}}
         @color={{this.color}}
