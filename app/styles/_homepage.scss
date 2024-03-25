@@ -44,3 +44,29 @@
     width: 20px;
   }
 }
+
+h1.company-logo {
+  width: 5em;
+  text-align: center;
+  font-family: "Orbitron", sans-serif;
+  font-weight: 200;
+  font-size: 64px;
+
+  color: white;
+  border: 0 solid;
+  border-radius: 45px;
+}
+
+h2.company-desc {
+  text-align: center;
+  width: 650px;
+  font-family: "Orbitron", sans-serif;
+  font-size: 28px;
+  color: white;
+}
+
+h3.sale-desc {
+  text-align: center;
+  font-weight: 700;
+  color: rgb(149, 19, 9);
+}
