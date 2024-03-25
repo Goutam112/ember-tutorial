@@ -24,14 +24,6 @@
     scale: 1.05;
   }
 
-  &.is-zoomed {
-    height: 100%;
-    .product-image {
-      max-height: 500px;
-      height: 500px;
-    }
-  }
-
   .product-image {
     width: 45%;
     height: 200px;
@@ -49,6 +41,14 @@
       max-height: 100%;
       object-fit: contain;
       border-radius: 4px;
+    }
+  }
+
+  &.is-zoomed {
+    height: 100%;
+    .product-image {
+      max-height: 500px;
+      height: 500px;
     }
   }
 
