@@ -1,7 +1,9 @@
 <GeneralContainer>
-  <div class="main-container d-flex">
+  <div class="d-flex flex-wrap">
     {{#each this.model as |product|}}
-      <Product data-test-product={{product.id}} @product={{product}} />
+      <div class="col-md-6">
+        <Product data-test-product={{product.id}} @product={{product}} />
+      </div>
     {{/each}}
   </div>
 </GeneralContainer>

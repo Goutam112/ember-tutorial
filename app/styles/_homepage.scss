@@ -1,6 +1,6 @@
 .cart-link {
   position: fixed;
-  right: 10px;
+  right: 20px;
   top: 65px;
   background-color: #fff;
   color: grey;
@@ -9,6 +9,7 @@
   font-size: 32px;
   border-radius: 50%;
   text-decoration: none;
+  border: 1px solid #eaeaea;
 
   box-shadow:
     0 2.8px 2.2px rgba(0, 0, 0, 0.034),
@@ -28,6 +29,7 @@
     text-decoration: none;
     color: rgb(167, 38, 38);
     scale: 1.1;
+    outline: 3px solid rgb(167, 38, 38);
   }
 
   .cart-count {
