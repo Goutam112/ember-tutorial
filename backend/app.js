@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const db = require('./db');
 const productRoutes = require('./routes/product');
+const orderRoutes = require('./routes/order');
 
 const app = express();
 // eslint-disable-next-line no-undef
@@ -16,6 +17,7 @@ db.connectDB().then(() => {
   app.use(cors());
 
   app.use('/api/products', productRoutes);
+  app.use('/api/orders', orderRoutes);
 
   // Start the server
   app.listen(PORT, () => {
