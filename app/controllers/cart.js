@@ -24,4 +24,9 @@ export default class CartController extends Controller {
       item.count = 0;
     }
   }
+
+  @action checkout() {
+    const successAlert = document.querySelector('#successAlert');
+    successAlert.style.display = 'block';
+  }
 }

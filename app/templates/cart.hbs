@@ -1,4 +1,9 @@
 <GeneralContainer>
+
+  <div id="successAlert" class="alert alert-success" role="alert">
+    Success! Your order has been placed and will be delivered within 2-4 weeks!
+  </div>
+
   <div class="container">
     <div class="card p-5 cart-container">
       <h1>Shopping Cart</h1>
@@ -43,7 +48,11 @@
               <span class="col">Total</span>
               <span class="col">{{currency this.total}}</span>
             </div>
-            <button type="button" class="btn btn-success mt-3 fw-bold">
+            <button
+              type="button"
+              class="btn btn-success mt-3 fw-bold"
+              onClick={{this.checkout}}
+            >
               Check out
             </button>
           </section>
