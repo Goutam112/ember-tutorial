@@ -26,8 +26,8 @@ export default class CartController extends Controller {
   }
 
   @action checkout() {
-    const successAlert = document.querySelector('#successAlert');
-    const errorAlert = document.querySelector('#errorAlert');
+    const successAlert = document.querySelector('#success-alert');
+    const errorAlert = document.querySelector('#error-alert');
     const products = document.querySelectorAll(
       '.cart-item.d-flex.align-items-center.card.product-description',
     );
