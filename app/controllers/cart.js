@@ -27,6 +27,19 @@ export default class CartController extends Controller {
 
   @action checkout() {
     const successAlert = document.querySelector('#successAlert');
-    successAlert.style.display = 'block';
+    const errorAlert = document.querySelector('#errorAlert');
+    const products = document.querySelectorAll(
+      '.cart-item.d-flex.align-items-center.card.product-description',
+    );
+    if (products.length > 0) {
+      errorAlert.style.display = 'none';
+      successAlert.style.display = 'block';
+      successAlert.innerHTML =
+        'Success! Your order has been placed and will be delivered within 2-4 weeks!';
+    } else {
+      successAlert.style.display = 'none';
+      errorAlert.style.display = 'block';
+      errorAlert.innerHTML = 'Cannot checkout with empty shopping cart!';
+    }
   }
 }
