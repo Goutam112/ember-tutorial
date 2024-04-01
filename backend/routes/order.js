@@ -52,3 +52,5 @@ router
       res.json({ message: `ORDER CONTROLLER <Delete order error:>` });
     }
   });
+
+module.exports = router;

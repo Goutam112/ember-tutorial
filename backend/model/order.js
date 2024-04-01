@@ -11,7 +11,7 @@ const OrderSchema = new Schema({
   zipcode: { type: Number, required: true },
   country: { type: String, enum: ['ca', 'us', 'uk', 'aus'] },
   totalprice: { type: Number },
-  products: [{ type: mongoose.Schema.Types.ObjectId, ref: 'product' }],
+  products: [{ type: Schema.Types.ObjectId, ref: 'product' }],
 });
 
 module.exports.OrderModel = model('order', OrderSchema);
