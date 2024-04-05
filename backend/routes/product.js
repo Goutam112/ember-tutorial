@@ -2,7 +2,6 @@
 const express = require('express');
 const ProductController = require('../controller/product');
 const mongoose = require('mongoose');
-const { PROTOCOL } = require('../../node_modules/sqlite3/lib/sqlite3');
 
 const router = express.Router();
 
