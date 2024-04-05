@@ -32,7 +32,7 @@ router
     try {
       await OrderController.editOrder(req, res);
     } catch (err) {
-      res.json({ message: `Edit Order Error: ${err}` });
+      res.json({ message: `ORDER CONTROLLER <Edit Order Error>: ${err}` });
     }
   });
 
@@ -49,7 +49,7 @@ router
     try {
       await OrderController.deleteOrder(req, res);
     } catch (err) {
-      res.json({ message: `ORDER CONTROLLER <Delete order error:>` });
+      res.json({ message: `ORDER CONTROLLER <Delete order error>: ${err}` });
     }
   });
 

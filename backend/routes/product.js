@@ -2,6 +2,7 @@
 const express = require('express');
 const ProductController = require('../controller/product');
 const mongoose = require('mongoose');
+const { PROTOCOL } = require('../../node_modules/sqlite3/lib/sqlite3');
 
 const router = express.Router();
 
@@ -21,15 +22,24 @@ const checkValidObjectIdParam = (paramName) => {
   };
 };
 
-router.route('/').get(async (req, res) => {
-  try {
-    await ProductController.getProducts(req, res);
-  } catch (err) {
-    res.json({
-      message: `PRODUCT CONTROLLER <Get all product error>: ${err}`,
-    });
-  }
-});
+router
+  .route('/')
+  .get(async (req, res) => {
+    try {
+      await ProductController.getProducts(req, res);
+    } catch (err) {
+      res.json({
+        message: `PRODUCT CONTROLLER <Get all product error>: ${err}`,
+      });
+    }
+  })
+  .put(async (req, res) => {
+    try {
+      await ProductController.editProduct(req, res);
+    } catch (err) {
+      res.json({ message: `PRODUCT CONTROLLER <Edit Product Error>: ${err}` });
+    }
+  });
 
 router
   .route('/product/:id')
@@ -39,6 +49,15 @@ router
     } catch (err) {
       res.json({
         message: `PRODUCT CONTROLLER <Get product by id error>: ${err}`,
+      });
+    }
+  })
+  .delete(checkValidObjectIdParam('id'), async (req, res) => {
+    try {
+      await ProductController.deleteProduct(req, res);
+    } catch (err) {
+      res.json({
+        message: `PRODUCT CONTROLLER <Delete product error>: ${err}`,
       });
     }
   });
